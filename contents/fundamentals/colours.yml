@@ -1,0 +1,20 @@
+moko:
+  hex: '#70CF32'
+storm:
+  hex: '#6C7279'
+mayhem:
+  hex: '#C61C1C'
+text-primary:
+  hex: '#C61C1C'
+white:
+  hex: '#FFFFFF'
+ocean-dark:
+  hex: '#2a78a4'
+ocean-light:
+  hex: '#5ab9e1'
+sky-light:
+  hex: '#8ee6e9'
+sky:
+  hex: '#6fd5d9'
+vhs:
+  hex: '#1c4561'
