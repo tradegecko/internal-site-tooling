@@ -7,7 +7,8 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('component', {path:'component/:component_id'},);
+  this.route('component', {path:'component/:component_id'});
+  this.route('colours');
 });
 
 export default Router;

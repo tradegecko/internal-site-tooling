@@ -2,7 +2,10 @@
     <div class="sidebar__logo">
       <img src="https://d3h6ue1fvxa32i.cloudfront.net/assets/tradegecko-mark-3433f1602d5b9c9963f77aaba9fd62cab8d159c2321019719e539434c7f81276.svg" width="70">
     </div>
-
+    <h2 class="sidebar__title">{{item}}</h2>
+    {{#link-to "colours"}}
+      Colours
+    {{/link-to}}
     {{#each-in @navigation as |item data|}}
       <h2 class="sidebar__title">{{item}}</h2>
       <ul>
