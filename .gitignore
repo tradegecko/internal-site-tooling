@@ -1,14 +1,16 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist/
-/tmp/
+
+**/dist/**
+**/tmp/**
 
 # dependencies
-/bower_components/
-/node_modules/
+**/node_modules/**
 
 # misc
+/**/yarn-error.log
+/**/.DS_Store
 /.env*
 /.pnp*
 /.sass-cache
