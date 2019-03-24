@@ -1,0 +1,25 @@
+{
+  "name": "@tradegecko/compiler",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "billybonks <sebastienstettler@gmail.com>",
+  "homepage": "https://github.com/tradegecko/tradegecko-design-system#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "keywords": [
+    "ember-addon"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tradegecko/tradegecko-design-system.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/tradegecko/tradegecko-design-system/issues"
+  }
+}
