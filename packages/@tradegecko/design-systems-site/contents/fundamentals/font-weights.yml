@@ -1,0 +1,14 @@
+default:
+  light: 300
+  regular: 400
+  bold: 700
+heading:
+  thin: 100
+  light: 300
+  regular: 400
+  bold: 700
+copy:
+  light: 300
+  regular: 400
+  bold: 600
+  black: 700
