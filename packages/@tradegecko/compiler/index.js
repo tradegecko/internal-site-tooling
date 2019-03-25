@@ -2,8 +2,6 @@ const StaticSiteJson = require('broccoli-static-site-json');
 const BroccoliMergeTrees = require('broccoli-merge-trees');
 const TableOfContents = require('./table-of-contents-compiler');
 const FundamentalsCompiler = require('./fundamentals-compiler');
-const ColoursCompiler = require('./colours-compiler');
-const FontCompiler = require('./font-compiler');
 const { Serializer } = require('jsonapi-serializer');
 
 const ColoursSerializer = new Serializer('colour', {
@@ -33,7 +31,7 @@ module.exports = {
 
     const componentNavigation = new TableOfContents(jsonTree);
 
-    const fundementalModels = new FundamentalsCompiler('contents/fundamentals', {
+    const fundementalModels = new FundamentalsCompiler('../fundemental-css/definitions', {
       files:[
         {
           inputFile:'colours.yml',
@@ -44,26 +42,6 @@ module.exports = {
           inputFile:'font-styles.yml',
           outputFile: 'type-styles.json',
           serializer: FontSerializer,
-        },
-      ]
-    });
-
-    const fontTree = new FontCompiler('contents/fundamentals', {
-      files:[
-        {
-          inputFile:'font-families.yml',
-          outputFile: 'font-families.scss',
-          variableName: 'font-families',
-        },
-        {
-          inputFile:'font-weights.yml',
-          outputFile: 'font-weights.scss',
-          variableName: 'font-weights',
-        },
-        {
-          inputFile:'font-styles.yml',
-          outputFile: 'font-styles.scss',
-          variableName: 'text-styles',
         },
       ]
     });
