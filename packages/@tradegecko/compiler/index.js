@@ -25,6 +25,7 @@ const FontSerializer = new Serializer('type-style', {
 module.exports = {
   name: 'docs-generator',
   treeForStyles(){
+    console.log('wtf')
     const coloursTree = new ColoursCompiler('contents/fundamentals', {
       files:[
         {
