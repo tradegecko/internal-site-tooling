@@ -24,39 +24,6 @@ const FontSerializer = new Serializer('type-style', {
 
 module.exports = {
   name: 'docs-generator',
-  treeForStyles(){
-    console.log('wtf')
-    const coloursTree = new ColoursCompiler('contents/fundamentals', {
-      files:[
-        {
-          inputFile:'colours.yml',
-          outputFile: 'colours.scss',
-        },
-      ]
-    });
-    const fontTree = new FontCompiler('contents/fundamentals', {
-      files:[
-        {
-          inputFile:'font-families.yml',
-          outputFile: 'font-families.scss',
-          variableName: 'font-families',
-        },
-        {
-          inputFile:'font-weights.yml',
-          outputFile: 'font-weights.scss',
-          variableName: 'font-weights',
-        },
-        {
-          inputFile:'font-styles.yml',
-          outputFile: 'font-styles.scss',
-          variableName: 'text-styles',
-        },
-      ]
-    });
-    return new BroccoliMergeTrees(
-      [coloursTree, fontTree]
-    );
-  },
   treeForPublic() {
     const jsonTree = new StaticSiteJson('contents/components', {
       type: 'component',
