@@ -26,7 +26,7 @@ module.exports = {
     const jsonTree = new StaticSiteJson('contents/components', {
       type: 'component',
       contentFolder: 'component',
-      attributes:['image', 'name']
+      attributes:['image', 'name','htmlpath','jspath']
     });
 
     const componentNavigation = new TableOfContents(jsonTree);
