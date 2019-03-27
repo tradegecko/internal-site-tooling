@@ -1,0 +1,20 @@
+{{#each-in properties as |key property|}}
+  {{#if (eq property.type 'string')}}
+    {{key}}: <input oninput={{action changeProp key}} />
+    <br />
+  {{/if}}
+  {{#if (eq property.type 'bool')}}
+    {{key}}:
+    <input oninput={{action changeBoolProp key}} type="checkbox" />
+    <br />
+  {{/if}}
+  {{#if (eq property.type 'oneOf')}}
+    {{key}}:
+    <select onchange={{action changeProp key}}>
+      {{#each property.valueOptions as |opt|}}
+        <option>{{opt}}</option>
+      {{/each}}
+    </select>
+    <br />
+  {{/if}}
+{{/each-in}}
