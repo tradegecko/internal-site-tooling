@@ -5,7 +5,7 @@ const FontCompiler = require('./font-compiler');
 module.exports = {
   name: 'fundemental-css',
   treeForStyles(){
-    const coloursTree = new ColoursCompiler(`../fundemental-css/definitions`, {
+    const coloursTree = new ColoursCompiler(`../styles/src`, {
       files:[
         {
           inputFile:'colours.yml',
@@ -13,7 +13,7 @@ module.exports = {
         },
       ]
     });
-    const fontTree = new FontCompiler(`../fundemental-css/definitions`, {
+    const fontTree = new FontCompiler(`../styles/src`, {
       files:[
         {
           inputFile:'font-families.yml',

@@ -31,7 +31,7 @@ module.exports = {
 
     const componentNavigation = new TableOfContents(jsonTree);
 
-    const fundementalModels = new FundamentalsCompiler('../fundemental-css/definitions', {
+    const fundementalModels = new FundamentalsCompiler('../styles/src', {
       files:[
         {
           inputFile:'colours.yml',

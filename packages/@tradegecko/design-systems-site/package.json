@@ -22,7 +22,7 @@
     "@ember/optional-features": "^0.7.0",
     "@tradegecko/alert-box": "0.0.1",
     "@tradegecko/compiler": "0.0.1",
-    "@tradegecko/fundemental-css": "0.0.1",
+    "@tradegecko/styles": "0.0.1",
     "@tradegecko/simple-site-generator": "0.0.1",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^4.0.1",
