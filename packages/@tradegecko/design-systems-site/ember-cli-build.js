@@ -4,7 +4,14 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    simpleSiteGenerator: {
+      staticSiteJson: {
+        type: 'component',
+        contentFolder: 'component',
+        attributes:['image', 'name']
+      },
+      folder: 'contents',
+    }
   });
 
   return app.toTree();
