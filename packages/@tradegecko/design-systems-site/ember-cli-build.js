@@ -6,8 +6,8 @@ module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     simpleSiteGenerator: {
       staticSiteJson: {
-        type: 'component',
-        contentFolder: 'component',
+        type: 'page',
+        contentFolder: 'pages',
         attributes:['image', 'name']
       },
       folder: 'contents',

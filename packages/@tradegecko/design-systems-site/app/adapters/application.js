@@ -7,6 +7,8 @@ export default DS.JSONAPIAdapter.extend({
       url = [`${Ember.String.pluralize(modelName)}.json`];
     } else if (requestType === 'queryRecord') {
       url = [modelName, `${query.path}.json`];
+    }else if (requestType === 'findRecord') {
+       url = [Ember.String.pluralize(modelName), `${id}.json`];
     } else if(requestType === 'query' && modelName === 'page') {
       url = ['content', 'pages.json'];
     } else {
