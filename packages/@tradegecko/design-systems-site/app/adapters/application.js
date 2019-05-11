@@ -1,14 +1,15 @@
 import DS from 'ember-data';
+import { pluralize } from 'ember-inflector';
 
 export default DS.JSONAPIAdapter.extend({
   buildURL(modelName, id, snapshot, requestType, query) {
     let url;
     if ( requestType === 'findAll') {
-      url = [`${Ember.String.pluralize(modelName)}.json`];
+      url = [`${pluralize(modelName)}.json`];
     } else if (requestType === 'queryRecord') {
       url = [modelName, `${query.path}.json`];
     }else if (requestType === 'findRecord') {
-       url = [Ember.String.pluralize(modelName), `${id}.json`];
+       url = [pluralize(modelName), `${id}.json`];
     } else if(requestType === 'query' && modelName === 'page') {
       url = ['content', 'pages.json'];
     } else {

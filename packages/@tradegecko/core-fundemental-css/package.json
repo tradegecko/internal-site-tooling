@@ -1,5 +1,5 @@
 {
-  "name": "@tradegecko/styles",
+  "name": "@tradegecko/core-fundemental-css",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "billybonks <sebastienstettler@gmail.com>",
@@ -8,12 +8,8 @@
   "main": "index.js",
   "dependencies": {
     "broccoli-merge-trees": "^3.0.2",
-    "broccoli-plugin": "^1.3.1",
-    "broccoli-static-site-json": "^3.2.0",
-    "ember-cli-sass": "^10.0.0",
-    "js-yaml": "^3.12.2",
-    "jsonapi-serializer": "^3.6.4",
-    "walk-sync": "^1.1.3"
+    "@tradegecko/yml-to-json-api":"0.0.1",
+    "@tradegecko/yml-to-scss":"0.0.1"
   },
   "keywords": [
     "ember-addon"

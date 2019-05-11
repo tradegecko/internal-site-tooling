@@ -1,9 +1,11 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  init(){
+  didReceiveAttrs() {
     this._super(...arguments);
-    let layout= this.get('html')
-    this.set('layout', Ember.HTMLBars.compile(layout))
+    let layout= this.get('html');
+    Ember.run.scheduleOnce('afterRender', this, function() {
+      this.set('layout', Ember.HTMLBars.compile(layout))
+    });
   }
 });
