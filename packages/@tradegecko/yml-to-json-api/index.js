@@ -1,15 +1,14 @@
 const { join } = require('path');
 const Plugin = require('broccoli-plugin');
-
 const yaml = require('js-yaml');
-
 const {
   writeFileSync,
   readFileSync,
 } = require('fs');
 
-class FundementalsCompiler extends Plugin {
+class YmlToJsonAPi extends Plugin {
   constructor(tree, options){
+    console.log(tree)
     super([tree]);
     this.options = options;
   }
@@ -33,4 +32,4 @@ class FundementalsCompiler extends Plugin {
   }
 }
 
-module.exports = FundementalsCompiler
+module.exports = YmlToJsonAPi
