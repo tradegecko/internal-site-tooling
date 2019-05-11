@@ -12,17 +12,13 @@ module.exports = {
   treeForPublic() {
     let staticSiteConfig = this.app.options.simpleSiteGenerator.staticSiteJson;
     let folder = this.app.options.simpleSiteGenerator.folder;
-        console.log(staticSiteConfig)
-            console.log(folder)
     const jsonTree = new StaticSiteJson(folder, staticSiteConfig);
 
     let images = funnel(folder,{
       destDir: 'images',
       include: ['**/*.png']
     });
-    // let images = new ImageExtractor('content', {
-    //
-    // })
+
     const navigation = new TableOfContents(jsonTree);
 
 

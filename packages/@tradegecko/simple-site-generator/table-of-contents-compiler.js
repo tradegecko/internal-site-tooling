@@ -23,8 +23,24 @@ class TableOfContents extends Plugin {
       return acc;
     }, {})
 
-    console.log(pages)
-    writeFileSync(join(this.outputPath,'pages.json'), JSON.stringify(pages))
+    let navigation = Object.entries(pages).map(function([root, entries]) {
+      if(root.includes(entries[0].path)){
+        return entries[0];
+      } else {
+        console.log({
+          label: root,
+          path: `${root}/index`,
+          children: entries
+        })
+        return {
+          label: root,
+          path: `${root}/index`,
+          children: entries
+        }
+      }
+    });
+
+    writeFileSync(join(this.outputPath,'pages.json'), JSON.stringify(navigation))
   }
 
   getName(folder, data) {
