@@ -4,4 +4,6 @@ export default DS.Model.extend({
   name: DS.attr(),
   html: DS.attr(),
   image: DS.attr(),
+  htmlpath: DS.attr(),
+  jspath: DS.attr()
 });
