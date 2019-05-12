@@ -1,0 +1,29 @@
+<aside class="menu column is-2 app__sidemenu">
+  <h4 class="h4 app__sidemenu__title">
+    Product Experience
+  </h4>
+  <ul class="app__sidelist">
+  {{#each-in @navigation as |index nav|}}
+    {{#if nav.children}}
+    <li class="app__sidelist__item">
+      <details>
+        <summary class="app__sidelist__summary">{{nav.label}}</summary>
+        <ul class="app__sidelist">
+          {{#each-in nav.children as |index child|}}
+            <li class="app__sidelist__item">
+              {{#link-to "page" child.path class="app__sidelist__link"}}{{child.label}}{{/link-to}}
+            </li>
+          {{/each-in}}
+        </ul>
+      </details>
+    </li>
+      {{else}}
+        <li class="app__sidelist__item">
+          {{#link-to  "page" nav.path class="app__sidelist__link"}}
+            {{nav.label}}
+          {{/link-to}}
+        </li>
+      {{/if}}
+    {{/each-in}}
+  </ul>
+</aside>
