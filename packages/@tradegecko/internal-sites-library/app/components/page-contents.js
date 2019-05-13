@@ -1,4 +1,1 @@
-import Component from '@glimmer/component';
-
-export default class PageContentsComponent extends Component {
-}
+export { default } from '@tradegecko/internal-sites-library/components/page-contents';

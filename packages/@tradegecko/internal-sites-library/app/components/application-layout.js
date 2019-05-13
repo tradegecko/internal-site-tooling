@@ -1,4 +1,1 @@
-import Component from '@glimmer/component';
-
-export default class ApplicationLayoutComponent extends Component {
-}
+export { default } from '@tradegecko/internal-sites-library/components/application-layout';

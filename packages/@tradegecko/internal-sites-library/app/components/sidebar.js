@@ -1,4 +1,1 @@
-import Component from '@glimmer/component';
-
-export default class SidebarComponent extends Component {
-}
+export { default } from '@tradegecko/internal-sites-library/components/sidebar';
