@@ -1,25 +1,29 @@
-<aside class="menu column is-2 app__sidemenu">
-  <h4 class="h4 app__sidemenu__title">
+<aside class="">
+  <h4 class="title">
     Product Experience
   </h4>
-  <ul class="app__sidelist">
+  <ul>
   {{#each-in @navigation as |index nav|}}
     {{#if nav.children}}
-    <li class="app__sidelist__item">
+    <li class="list-item">
       <details>
-        <summary class="app__sidelist__summary">{{nav.label}}</summary>
-        <ul class="app__sidelist">
+        <summary class="details-title">
+          {{nav.label}}
+        </summary>
+        <ul>
           {{#each-in nav.children as |index child|}}
-            <li class="app__sidelist__item">
-              {{#link-to "page" child.path class="app__sidelist__link"}}{{child.label}}{{/link-to}}
+            <li>
+              {{#link-to "page" child.path class="link"}}
+                {{child.label}}
+              {{/link-to}}
             </li>
           {{/each-in}}
         </ul>
       </details>
     </li>
       {{else}}
-        <li class="app__sidelist__item">
-          {{#link-to  "page" nav.path class="app__sidelist__link"}}
+        <li>
+          {{#link-to  "page" nav.path class="link"}}
             {{nav.label}}
           {{/link-to}}
         </li>
