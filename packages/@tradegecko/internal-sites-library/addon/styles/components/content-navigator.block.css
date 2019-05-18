@@ -1,0 +1,48 @@
+:scope {
+  width: 33.3333%;
+  flex: 0 0 auto;
+  padding-top: 0px;
+}
+
+.navigation {
+  font-size: 0.833em;
+}
+
+.list {
+  padding-left: 1rem;
+  float: left;
+}
+
+.link {
+  color: #6c7279;
+}
+
+.edit-link {
+  color: #0366d8;
+}
+
+.list-item {
+  padding: 0.5rem 0;
+}
+
+@media screen and (min-width: 1088px) {
+  .navigation {
+    padding-top: 4rem;
+  }
+  .list {
+    border-left: 0.0625rem solid rgb(226, 230, 232);
+  }
+}
+
+
+
+
+.app__toc-item {
+  }
+
+
+.app__toc-link, .app__toc-link--primary {
+  }
+
+.app__toc-link--primary {
+   }

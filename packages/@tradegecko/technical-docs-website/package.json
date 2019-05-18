@@ -17,6 +17,9 @@
     "start": "ember serve",
     "test": "ember test"
   },
+  "dependencies":{
+    "@css-blocks/ember-cli": "^0.23.0"
+  },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
     "@glimmer/component": "^0.14.0-alpha.3",
