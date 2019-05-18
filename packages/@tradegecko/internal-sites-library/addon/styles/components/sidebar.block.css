@@ -30,6 +30,10 @@
   cursor: pointer;
 }
 
+
+.list-item {
+
+}
 @media screen and (min-width: 1088px) {
   .title {
     margin-top: 4rem;
@@ -45,12 +49,4 @@
   :scope {
     border-right: 0.0625rem solid #e2e6e8;
   }
-}
-
-.list-item {
-
-}
-
-@media screen and (min-width: 1088px) {
-
 }
