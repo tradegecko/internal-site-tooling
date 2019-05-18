@@ -1,0 +1,31 @@
+{
+  "name": "@tradegecko/static-site-toc-generator",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "billybonks <sebastienstettler@gmail.com>",
+  "homepage": "https://github.com/tradegecko/tradegecko-design-system#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "dependencies": {
+    "broccoli-filter": "^1.3.0",
+    "broccoli-plugin": "^1.3.1",
+    "jest": "^24.8.0",
+    "jsdom": "^15.1.0"
+  },
+  "ember-addon": {
+    "before": "prember"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tradegecko/tradegecko-design-system.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/tradegecko/tradegecko-design-system/issues"
+  }
+}
