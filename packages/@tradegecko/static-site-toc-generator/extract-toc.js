@@ -9,7 +9,8 @@ module.exports = function(htmlString, depth){
   return nodeArray.map((node) => {
     return {
       level:+node.nodeName.replace('H', ''),
-      id:node.id
+      id:node.id,
+      label: node.textContent,
     }
   })
 }
