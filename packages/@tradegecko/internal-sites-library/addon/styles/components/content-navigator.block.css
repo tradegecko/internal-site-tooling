@@ -2,6 +2,8 @@
   width: 33.3333%;
   flex: 0 0 auto;
   padding-top: 0px;
+  position: fixed;
+  right: 0px;
 }
 
 .navigation {
