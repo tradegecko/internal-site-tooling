@@ -1,7 +1,7 @@
 <div>
   <nav class="navigation">
     <ul class="list">
-      {{#each this.tocArray as |toc|}}
+      {{#each @toc as |toc|}}
       <li class="list-item">
         <a class="link" href="#{{toc.id}}">{{toc.label}}</a>
       </li>
