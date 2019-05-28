@@ -5,22 +5,22 @@
   <ul>
   {{#each-in @navigation as |index nav|}}
     {{#if nav.children}}
-    <li class="list-item">
-      <details>
-        <summary class="details-title">
-          {{nav.label}}
-        </summary>
-        <ul>
-          {{#each-in nav.children as |index child|}}
-            <li>
-              {{#link-to "page" child.path class="link"}}
-                {{child.label}}
-              {{/link-to}}
-            </li>
-          {{/each-in}}
-        </ul>
-      </details>
-    </li>
+      <li class="list-item">
+        <details>
+          <summary class="details-title">
+            {{nav.label}}
+          </summary>
+          <ul>
+            {{#each-in nav.children as |index child|}}
+              <li>
+                {{#link-to "page" child.path class="link"}}
+                  {{child.label}}
+                {{/link-to}}
+              </li>
+            {{/each-in}}
+          </ul>
+        </details>
+      </li>
       {{else}}
         <li>
           {{#link-to  "page" nav.path class="link"}}

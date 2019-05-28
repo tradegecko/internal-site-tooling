@@ -11,7 +11,7 @@ module.exports = function(defaults) {
         attributes:['image', 'name']
       },
       folder: 'contents',
-      markdownTocDepth: 2,
+      markdownTocDepth: 3,
     }
   });
 
