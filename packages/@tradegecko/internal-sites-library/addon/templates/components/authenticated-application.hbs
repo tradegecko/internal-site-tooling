@@ -1,0 +1,7 @@
+{{#if @session.isAuthenticated}}
+  <Application>
+    {{yield}}
+  </Application>
+{{else}}
+  <button {{action @login}}>Sign in</button>
+{{/if}}

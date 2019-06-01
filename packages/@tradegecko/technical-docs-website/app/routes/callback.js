@@ -1,6 +1,5 @@
-import OAuth2ImplicitGrantCallbackRouteMixin from 'ember-simple-auth/mixins/oauth2-implicit-grant-callback-route-mixin';
-import Route from '@ember/routing/route';
+import GoogleCallbackRoute from '@tradegecko/internal-sites-library/routes/google-callback';
 
-export default Route.extend(OAuth2ImplicitGrantCallbackRouteMixin, {
-  authenticator: 'authenticator:tradegecko',
-});
+export default class Callback extends GoogleCallbackRoute {
+
+}

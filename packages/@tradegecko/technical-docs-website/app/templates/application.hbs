@@ -1,8 +1,3 @@
-{{#if true}} {{!-- session.isAuthenticated --}}
-<ApplicationHeader />
-<ApplicationLayout >
+<AuthenticatedApplication @session={{session}} @login={{action "login"}}>
   {{outlet}}
-</ApplicationLayout>
-{{else}}
-<button {{action "myAction"}}>Sign in </button>
-{{/if}}
+</AuthenticatedApplication>
