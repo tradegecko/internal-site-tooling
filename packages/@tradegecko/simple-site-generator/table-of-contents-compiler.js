@@ -63,11 +63,14 @@ function getPageLinks(pages,root,path){
   return pages.map((page) => {
     let pageJson = require(join(...[root,...path,page]));
     let navigationSettings = pageJson.data.attributes.navigation || {}
+    if(navigationSettings.hidden){
+      return null;
+    }
     return {
       title: navigationSettings.title || humanize(page),
       url: [...path,page.split('.')[0]].join('/')
     }
-  })
+  }).filter((element) => element !== null);
 }
 
 module.exports = TableOfContents;
