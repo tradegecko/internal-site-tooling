@@ -14,6 +14,7 @@ module.exports = {
     let siteGeneratorOptions = this.app.options.simpleSiteGenerator;
     let staticSiteConfig = siteGeneratorOptions.staticSiteJson;
     let folder = siteGeneratorOptions.folder;
+    staticSiteConfig.attributes.push('navigation')
     const jsonTree = new StaticSiteJson(folder, staticSiteConfig);
 
     console.log(siteGeneratorOptions.markdownTocDepth)
@@ -24,7 +25,9 @@ module.exports = {
       include: ['**/*.png']
     });
 
-    const navigation = new TableOfContents(jsonTree);
+    const navigation = new TableOfContents(jsonTree, {
+      root: staticSiteConfig.contentFolder
+    });
 
 
     return new BroccoliMergeTrees(
