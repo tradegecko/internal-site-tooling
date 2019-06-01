@@ -2,57 +2,72 @@ const walkSync = require('walk-sync')
 const { join } = require('path');
 const Plugin = require('broccoli-plugin');
 const { writeFileSync } = require('fs');
+const buildTree = require('./build-tree');
 
 class TableOfContents extends Plugin {
-  constructor(tree){
+  constructor(tree, options){
     super([tree]);
+    this.options = options;
   }
 
   build() {
     let inputPath = this.inputPaths[0]
-    let res = walkSync(this.inputPaths[0], ['**/*.json']);
-    let pages = res.reduce((acc, path) => {
-      let pathArray = path.split('/')
-      let folder = pathArray[1]
-      if(!acc[folder]){
-        acc[folder] = []
-      }
-      let {data} = require(`${inputPath}/${path}`);
-
-      acc[folder].push({path:data.id, label: this.getName(folder, data)});
-      return acc;
-    }, {})
-
-    let navigation = Object.entries(pages).map(function([root, entries]) {
-      if(root.includes(entries[0].path)){
-        return entries[0];
-      } else {
-        console.log({
-          label: root,
-          path: `${root}/index`,
-          children: entries
-        })
-        return {
-          label: root,
-          path: `${root}/index`,
-          children: entries
-        }
-      }
-    });
-
+    let res = walkSync(inputPath, ['**/*.json']);
+    let pages = buildTree(res);
+    let navigation = buildNav(pages, inputPath, this.options.root)
     writeFileSync(join(this.outputPath,'pages.json'), JSON.stringify(navigation))
   }
 
-  getName(folder, data) {
-    if(data.attributes.name){
-      return data.attributes.name
-    }
-    if(folder.includes(data.id)) {
-      return data.id
-    }
-    let splitPath = data.id.split('/')
-    return splitPath[splitPath.length -1 ];
+}
+
+function humanize(title) {
+  return capitalize(title.split('.')[0])
+  .replace(/-/g,' ')
+  .replace(/_/g,' ');
+}
+
+function capitalize(string){
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function buildNav(pages, inputPath, root){
+  let dir = join(inputPath,root)
+  let path = [];
+  let page = pages[root]
+  let topLevel= buildNavigationSection(page,dir,path);
+  return [
+    {
+       title: 'root',
+       url: `index.md`,
+    },
+    ...topLevel
+  ]
+}
+
+function buildNavigationSection(page, dir, path){
+  if(!page.children){
+    return [];
   }
+  return Object.entries(page.children).map(([key, value]) => {
+    let newPath = [...path, key];
+    return {
+      title: humanize(key),
+      url: `${key}/index`,
+      pages: getPageLinks(value.pages,dir,newPath),
+      children: buildNavigationSection(value, dir, newPath),
+    }
+  });
+}
+
+function getPageLinks(pages,root,path){
+  return pages.map((page) => {
+    let pageJson = require(join(...[root,...path,page]));
+    let navigationSettings = pageJson.data.attributes.navigation || {}
+    return {
+      title: navigationSettings.title || humanize(page),
+      url: [...path,page.split('.')[0]].join('/')
+    }
+  })
 }
 
 module.exports = TableOfContents;

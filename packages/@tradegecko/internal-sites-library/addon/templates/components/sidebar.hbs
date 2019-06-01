@@ -2,32 +2,47 @@
   <h4 class="title">
     Product Experience
   </h4>
-  <ul>
-  {{#each-in this.navigation as |index nav|}}
-    {{#if nav.children}}
-      <li class="list-item">
-        <details>
-          <summary class="details-title">
-            {{nav.label}}
-          </summary>
-          <ul>
-            {{#each-in nav.children as |index child|}}
-              <li>
-                {{#link-to "page" child.path class="link"}}
-                  {{child.label}}
-                {{/link-to}}
-              </li>
-            {{/each-in}}
-          </ul>
-        </details>
+  {{#each-in this.navWithoutChildren as | index nav |}}
+    <ul>
+      <li>
+        {{#link-to  "page" nav.url class="link"}}
+          {{nav.title}}
+        {{/link-to}}
       </li>
-      {{else}}
+    </ul>
+  {{/each-in}}
+
+  {{#each-in this.navWithChildren as | index nav |}}
+    {{log nav}}
+    <h4 class="title">
+      {{nav.title}}
+    </h4>
+    <ul>
+      {{#each nav.pages as |child|}}
         <li>
-          {{#link-to  "page" nav.path class="link"}}
-            {{nav.label}}
+          {{#link-to "page" child.url class="link"}}
+            {{child.title}}
           {{/link-to}}
         </li>
-      {{/if}}
-    {{/each-in}}
-  </ul>
+      {{/each}}
+      {{#each-in nav.children as |index childNav|}}
+          <li class="list-item">
+            <details>
+              <summary class="details-title">
+                {{childNav.title}}
+              </summary>
+              <ul>
+                {{#each-in childNav.pages as |index child|}}
+                  <li>
+                    {{#link-to "page" child.url class="link"}}
+                      {{child.title}}
+                    {{/link-to}}
+                  </li>
+                {{/each-in}}
+              </ul>
+            </details>
+          </li>
+        {{/each-in}}
+    </ul>
+  {{/each-in}}
 </aside>
