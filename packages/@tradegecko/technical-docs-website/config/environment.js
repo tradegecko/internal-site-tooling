@@ -33,6 +33,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.clientId = '276979615751-ec44omh1h3fh6p8kf6gms51hgfrtt70n.apps.googleusercontent.com';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
