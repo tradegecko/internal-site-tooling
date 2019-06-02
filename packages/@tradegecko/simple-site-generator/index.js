@@ -4,7 +4,7 @@ showdown.setOption('simplifiedAutoLink', true);
 
 const StaticSiteJson = require('broccoli-static-site-json');
 const BroccoliMergeTrees = require('broccoli-merge-trees');
-const TableOfContents = require('./table-of-contents-compiler');
+const TableOfContents = require('@tradegecko/folder-toc-generator');
 const MarkDownTableOfContents = require('@tradegecko/static-site-toc-generator');
 const funnel = require('broccoli-funnel');
 
@@ -17,7 +17,6 @@ module.exports = {
     staticSiteConfig.attributes.push('navigation')
     const jsonTree = new StaticSiteJson(folder, staticSiteConfig);
 
-    console.log(siteGeneratorOptions.markdownTocDepth)
     let jsonTreeWithToc = new MarkDownTableOfContents(jsonTree,
       {depth: siteGeneratorOptions.markdownTocDepth});
     let images = funnel(folder,{
