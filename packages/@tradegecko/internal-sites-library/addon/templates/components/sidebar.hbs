@@ -1,17 +1,4 @@
 <aside class="">
-  <h4 class="title">
-    Product Experience
-  </h4>
-  {{#each-in this.navWithoutChildren as | index nav |}}
-    <ul>
-      <li>
-        {{#link-to  "page" nav.url class="link"}}
-          {{nav.title}}
-        {{/link-to}}
-      </li>
-    </ul>
-  {{/each-in}}
-
   {{#each-in this.navWithChildren as | index nav |}}
     {{log nav}}
     <h4 class="title">
