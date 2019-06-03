@@ -11,9 +11,12 @@ class StaticSiteTocGenerator extends Filter {
 
   processString(contents){
     let jsonContent = JSON.parse(contents);
-    let toc = extractToc(jsonContent.data.attributes.html, this.depth);
-    jsonContent.data.attributes.toc = toc
-    return JSON.stringify(jsonContent);
+    if(jsonContent.data.attributes && jsonContent.data.attributes.html){
+      let toc = extractToc(jsonContent.data.attributes.html, this.depth);
+      jsonContent.data.attributes.toc = toc
+      return JSON.stringify(jsonContent);
+    }
+    return contents;
   }
 
   getDestFilePath(relativePath){
