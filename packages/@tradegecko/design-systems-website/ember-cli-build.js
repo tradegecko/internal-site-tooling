@@ -1,5 +1,5 @@
 'use strict';
-
+const PagesTocGenerator = require('@tradegecko/pages-toc-generator');
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
@@ -10,6 +10,7 @@ module.exports = function(defaults) {
         contentFolder: 'page',
         attributes:['image', 'name']
       },
+      tocGenerator: PagesTocGenerator,
       folder: 'contents',
       markdownTocDepth: 3,
     }
