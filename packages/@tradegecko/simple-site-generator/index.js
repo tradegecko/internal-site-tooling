@@ -21,7 +21,7 @@ module.exports = {
       {depth: siteGeneratorOptions.markdownTocDepth});
     let images = funnel(folder,{
       destDir: 'images',
-      include: ['**/*.png']
+      include: ['**/*.png','**/*.jpg']
     });
     let navigation = null;
     if(siteGeneratorOptions.tocGenerator){
