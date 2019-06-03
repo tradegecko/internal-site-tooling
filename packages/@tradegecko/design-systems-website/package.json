@@ -25,6 +25,7 @@
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
     "@glimmer/component": "^0.14.0-alpha.3",
+    "@tradegecko/pages-toc-generator": "0.0.1",
     "@tradegecko/internal-sites-library": "0.0.1",
     "@tradegecko/simple-site-generator": "0.0.1",
     "babel-eslint": "^8.0.2",

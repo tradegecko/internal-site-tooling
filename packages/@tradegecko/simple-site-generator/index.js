@@ -15,19 +15,22 @@ module.exports = {
     let staticSiteConfig = siteGeneratorOptions.staticSiteJson;
     let folder = siteGeneratorOptions.folder;
     staticSiteConfig.attributes.push('navigation')
+    const TocGenerator = siteGeneratorOptions.tocGenerator || TableOfContents
     const jsonTree = new StaticSiteJson(folder, staticSiteConfig);
-
     let jsonTreeWithToc = new MarkDownTableOfContents(jsonTree,
       {depth: siteGeneratorOptions.markdownTocDepth});
     let images = funnel(folder,{
       destDir: 'images',
       include: ['**/*.png']
     });
-
-    const navigation = new TableOfContents(jsonTree, {
-      root: staticSiteConfig.contentFolder
-    });
-
+    let navigation = null;
+    if(siteGeneratorOptions.tocGenerator){
+      navigation = new siteGeneratorOptions.tocGenerator(folder);
+    } else {
+      navigation = new TocGenerator(jsonTree, {
+        root: staticSiteConfig.contentFolder
+      });
+    }
 
     return new BroccoliMergeTrees(
       [jsonTreeWithToc, navigation, images]
