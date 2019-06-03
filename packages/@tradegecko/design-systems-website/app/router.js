@@ -8,6 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
     this.route('page', {path:'page/:page_id'},);
+    this.route('callback', {path:'callback'});
 });
 
 export default Router;
