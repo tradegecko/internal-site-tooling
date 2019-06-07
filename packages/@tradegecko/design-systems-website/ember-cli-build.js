@@ -16,7 +16,5 @@ module.exports = function(defaults) {
     }
   });
 
-  app.import('node_modules/ember-source/dist/ember-template-compiler.js')
-
   return app.toTree();
 };

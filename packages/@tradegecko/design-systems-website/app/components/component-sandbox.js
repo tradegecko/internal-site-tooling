@@ -1,35 +1,26 @@
-import Component from '@ember/component';
-import { action } from "@ember/object"
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
 
-export default Component.extend({
-  init(){
-    this._super(...arguments);
-    debugger
-    let props = require(this.jspath).default.propTypes
-    this.componentProperties = props;
-    let propString = Object.keys(props).reduce((acc,prop) => `${acc} ${prop}=${prop}`,'')
-    let layout=`
-    {{${this.htmlpath}
-      ${propString}
-    }}
-    qwe
-    {{property-editor
-      properties=componentProperties
-      changeProp=(action "changeProp")
-      changeBoolProp=(action "changeBoolProp")
-    }}
-    `
-    this.layout = Ember.HTMLBars.compile(layout);
-  },
+export default class ComponentSandbox extends Component {
+  @tracked componentRuntimeProperties;
+  @tracked componentRuntimeProperties = {};
 
-  @action
-  changeProp(key, target){
-    this.set(key, target.target.value);
-  },
-
-  @action
-  changeBoolProp(key, target){
-    this.set(key, target.target.checked);
+  get componentPropertyDefinitions() {
+    return require(this.args.jspath).default.propTypes
   }
 
-})
+  get template(){
+    let propertyKeys = Object.keys(this.componentPropertyDefinitions);
+    let propString = propertyKeys.reduce((acc,prop) => `${acc} ${prop}=${prop}`,'')
+    return `{{${this.args.htmlpath} ${propString} }}`
+  }
+
+  @action
+  componentPropertyChanged(key, value){
+    this.componentRuntimeProperties = {
+      ...this.componentRuntimeProperties,
+      [key]: value
+    }
+  }
+}

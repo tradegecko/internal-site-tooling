@@ -1,4 +1,14 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
 
-export default Component.extend({
-})
+export default class PropertyEditor extends Component {
+  @action
+  changeProp(key, element) {
+    this.args.propertyChanged(key, element.target.value)
+  }
+
+  @action
+  changeBoolProp(key, element) {
+    this.args.propertyChanged(key, element.target.checked)
+  }
+}

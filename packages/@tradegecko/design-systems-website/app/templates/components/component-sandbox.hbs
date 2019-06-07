@@ -1,0 +1,8 @@
+<RenderTemplate
+  @templateString={{this.template}}
+  @props={{this.componentRuntimeProperties}}
+/>
+<PropertyEditor
+  @properties={{this.componentPropertyDefinitions}}
+  @propertyChanged={{action "componentPropertyChanged"}}
+/>

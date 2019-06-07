@@ -18,9 +18,7 @@
     "test": "ember test"
   },
   "dependencies": {
-    "@css-blocks/ember-cli": "^0.23.0",
-    "ember-cli-babel": "^7.7.0",
-    "ember-cli-htmlbars": "^3.0.0"
+    "@css-blocks/ember-cli": "^0.23.0"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
@@ -45,6 +43,7 @@
     "ember-cli-template-lint": "^1.0.0-beta.1",
     "ember-cli-uglify": "^2.1.0",
     "ember-data": "github:emberjs/data#1df833396855d956b817540923dd89338463fec2",
+    "ember-dynamic-render-template": "^0.0.5",
     "ember-export-application-global": "^2.0.0",
     "ember-fetch": "^6.5.1",
     "ember-load-initializers": "^2.0.0",
