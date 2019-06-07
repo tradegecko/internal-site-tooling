@@ -1,9 +1,11 @@
 import DS from 'ember-data';
 import { computed } from '@ember/object';
-import { inject as service } from '@ember/service';
+import { getOwner } from '@ember/application';
 
 export default DS.JSONAPIAdapter.extend({
-  fastboot: service(),
+  fastboot: computed(function(){
+    getOwner(this).lookup('service:fastboot');
+  }),
 
   host: computed('fastboot.isFastBoot', function() {
     if (this.get('fastboot.isFastBoot')) {
