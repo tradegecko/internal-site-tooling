@@ -1,6 +1,3 @@
-OMG
-{{log this}}
-{{log @properties}}
 {{#each-in @properties as |key property|}}
   {{#if (eq property.type 'string')}}
     {{key}}: <input oninput={{action 'changeProp' key}} />
