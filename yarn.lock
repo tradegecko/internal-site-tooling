@@ -6464,7 +6464,7 @@ ember-cli-htmlbars-inline-precompile@^2.0.0, ember-cli-htmlbars-inline-precompil
     heimdalljs-logger "^0.1.9"
     silent-error "^1.1.0"
 
-ember-cli-htmlbars@^2.0.3:
+ember-cli-htmlbars@^2.0.1, ember-cli-htmlbars@^2.0.3:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-2.0.5.tgz#b5a105429a6bce4f7c9c97b667e3b8926e31397f"
   integrity sha512-3f3PAxdnQ/fhQa8XP/3z4RLRgLHxV8j4Ln75aHbRdemOCjBa048KxL9l+acRLhCulbGQCMnLiIUIC89PAzLrcA==
@@ -6853,6 +6853,38 @@ ember-compatibility-helpers@^1.1.1, ember-compatibility-helpers@^1.1.2:
     ember-cli-babel "^7.1.0"
     ember-getowner-polyfill "^1.1.0 || ^2.0.0"
 
+ember-data@^3.10.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-3.10.0.tgz#b5f53a445ba1ee37890ec672b3dc3f869d8b3992"
+  integrity sha512-QqKJ5/Co2wGBnD5FSUiO1tbhsjjiRS5uJUwD2vRa0suwNv5E9f+5S6Yww6O0B2z5nDRzRheBFZ7iRjbshQhWDg==
+  dependencies:
+    "@ember/ordered-set" "^2.0.3"
+    "@glimmer/env" "^0.1.7"
+    babel-plugin-feature-flags "^0.3.1"
+    babel-plugin-filter-imports "^2.0.4"
+    babel6-plugin-strip-class-callcheck "^6.0.0"
+    babel6-plugin-strip-heimdall "^6.0.1"
+    broccoli-debug "^0.6.5"
+    broccoli-file-creator "^2.1.1"
+    broccoli-funnel "^2.0.1"
+    broccoli-merge-trees "^3.0.2"
+    broccoli-rollup "^2.1.1"
+    calculate-cache-key-for-tree "^1.2.0"
+    chalk "^2.4.1"
+    ember-cli-babel "^7.7.3"
+    ember-cli-path-utils "^1.0.0"
+    ember-cli-string-utils "^1.1.0"
+    ember-cli-test-info "^1.0.0"
+    ember-cli-typescript "^2.0.0"
+    ember-cli-version-checker "^3.1.3"
+    ember-inflector "^3.0.0"
+    git-repo-info "^2.0.0"
+    heimdalljs "^0.3.0"
+    inflection "^1.12.0"
+    npm-git-info "^1.0.3"
+    resolve "^1.8.1"
+    silent-error "^1.1.1"
+
 "ember-data@github:emberjs/data#1df833396855d956b817540923dd89338463fec2":
   version "3.9.0-canary"
   resolved "https://codeload.github.com/emberjs/data/tar.gz/1df833396855d956b817540923dd89338463fec2"
@@ -6889,6 +6921,17 @@ ember-disable-prototype-extensions@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/ember-disable-prototype-extensions/-/ember-disable-prototype-extensions-1.1.3.tgz#1969135217654b5e278f9fe2d9d4e49b5720329e"
   integrity sha1-GWkTUhdlS14nj5/i2dTkm1cgMp4=
+
+ember-dynamic-render-template@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/ember-dynamic-render-template/-/ember-dynamic-render-template-0.0.5.tgz#52d4774264c76900a63f39ed0e6c3c1670e5dca4"
+  integrity sha512-+2+wdArW5kljLbrPSH9RYrkwVAj+NsGg0m2ZA6O+AN0N/nA1cusZHlSejRsb1PAYJu9olXFoeqCOHH0YXlW9Aw==
+  dependencies:
+    broccoli-funnel "^2.0.1"
+    broccoli-merge-trees "^3.0.1"
+    ember-cli-babel "^6.6.0"
+    ember-cli-htmlbars "^2.0.1"
+    resolve "^1.8.1"
 
 ember-export-application-global@^2.0.0:
   version "2.0.0"
@@ -7112,6 +7155,44 @@ ember-source-channel-url@^1.0.1, ember-source-channel-url@^1.1.0:
     jquery "^3.4.1"
     resolve "^1.10.1"
 
+"ember-source@https://s3.amazonaws.com/builds.emberjs.com/canary/shas/2a159c586d6ceaba6eb2fbc154d770a04f950dcd.tgz":
+  version "3.12.0-canary"
+  resolved "https://s3.amazonaws.com/builds.emberjs.com/canary/shas/2a159c586d6ceaba6eb2fbc154d770a04f950dcd.tgz#2c3a97b2346f814f928155f0dab4d9a126bf79a5"
+  dependencies:
+    broccoli-funnel "^2.0.2"
+    broccoli-merge-trees "^3.0.2"
+    chalk "^2.4.2"
+    ember-cli-babel "^7.7.0"
+    ember-cli-get-component-path-option "^1.0.0"
+    ember-cli-is-package-missing "^1.0.0"
+    ember-cli-normalize-entity-name "^1.0.0"
+    ember-cli-path-utils "^1.0.0"
+    ember-cli-string-utils "^1.1.0"
+    ember-cli-version-checker "^3.1.3"
+    ember-router-generator "^1.2.3"
+    inflection "^1.12.0"
+    jquery "^3.4.1"
+    resolve "^1.10.1"
+
+"ember-source@https://s3.amazonaws.com/builds.emberjs.com/canary/shas/a9f2c52c7049da8ad1301493e89d194a6e5f083c.tgz":
+  version "3.12.0-canary"
+  resolved "https://s3.amazonaws.com/builds.emberjs.com/canary/shas/a9f2c52c7049da8ad1301493e89d194a6e5f083c.tgz#277d9dc6217fa28944cac97899163a00f017dc1b"
+  dependencies:
+    broccoli-funnel "^2.0.2"
+    broccoli-merge-trees "^3.0.2"
+    chalk "^2.4.2"
+    ember-cli-babel "^7.7.0"
+    ember-cli-get-component-path-option "^1.0.0"
+    ember-cli-is-package-missing "^1.0.0"
+    ember-cli-normalize-entity-name "^1.0.0"
+    ember-cli-path-utils "^1.0.0"
+    ember-cli-string-utils "^1.1.0"
+    ember-cli-version-checker "^3.1.3"
+    ember-router-generator "^1.2.3"
+    inflection "^1.12.0"
+    jquery "^3.4.1"
+    resolve "^1.10.1"
+
 ember-source@~3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.8.0.tgz#b84ba995d5049514a146c6df20c2fe20de08f211"
@@ -7143,6 +7224,13 @@ ember-template-lint@^1.0.0-beta.5:
     minimatch "^3.0.4"
     resolve "^1.1.3"
     strip-bom "^3.0.0"
+
+ember-truth-helpers@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/ember-truth-helpers/-/ember-truth-helpers-2.1.0.tgz#d4dab4eee7945aa2388126485977baeb33ca0798"
+  integrity sha512-BQlU8aTNl1XHKTYZ243r66yqtR9JU7XKWQcmMA+vkqfkE/c9WWQ9hQZM8YABihCmbyxzzZsngvldokmeX5GhAw==
+  dependencies:
+    ember-cli-babel "^6.6.0"
 
 ember-try-config@^3.0.0:
   version "3.0.0"
