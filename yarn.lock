@@ -7117,25 +7117,6 @@ ember-source-channel-url@^1.0.1, ember-source-channel-url@^1.1.0:
   dependencies:
     got "^8.0.1"
 
-"ember-source@https://s3.amazonaws.com/builds.emberjs.com/canary/shas/1cb5f677e6d980b6e14986b5fdf1f98536f5a214.tgz":
-  version "3.12.0-canary"
-  resolved "https://s3.amazonaws.com/builds.emberjs.com/canary/shas/1cb5f677e6d980b6e14986b5fdf1f98536f5a214.tgz#a556a10ee7bf56f943fcbe67f0627f9389adc32c"
-  dependencies:
-    broccoli-funnel "^2.0.2"
-    broccoli-merge-trees "^3.0.2"
-    chalk "^2.4.2"
-    ember-cli-babel "^7.7.0"
-    ember-cli-get-component-path-option "^1.0.0"
-    ember-cli-is-package-missing "^1.0.0"
-    ember-cli-normalize-entity-name "^1.0.0"
-    ember-cli-path-utils "^1.0.0"
-    ember-cli-string-utils "^1.1.0"
-    ember-cli-version-checker "^3.1.3"
-    ember-router-generator "^1.2.3"
-    inflection "^1.12.0"
-    jquery "^3.4.1"
-    resolve "^1.10.1"
-
 "ember-source@https://s3.amazonaws.com/builds.emberjs.com/canary/shas/213852eb5a3e9f829b402f3d8d91be97f727d4d1.tgz":
   version "3.11.0-canary"
   resolved "https://s3.amazonaws.com/builds.emberjs.com/canary/shas/213852eb5a3e9f829b402f3d8d91be97f727d4d1.tgz#9abdd79643b2020e24f99116277c305de65df714"
@@ -7158,25 +7139,6 @@ ember-source-channel-url@^1.0.1, ember-source-channel-url@^1.1.0:
 "ember-source@https://s3.amazonaws.com/builds.emberjs.com/canary/shas/2a159c586d6ceaba6eb2fbc154d770a04f950dcd.tgz":
   version "3.12.0-canary"
   resolved "https://s3.amazonaws.com/builds.emberjs.com/canary/shas/2a159c586d6ceaba6eb2fbc154d770a04f950dcd.tgz#2c3a97b2346f814f928155f0dab4d9a126bf79a5"
-  dependencies:
-    broccoli-funnel "^2.0.2"
-    broccoli-merge-trees "^3.0.2"
-    chalk "^2.4.2"
-    ember-cli-babel "^7.7.0"
-    ember-cli-get-component-path-option "^1.0.0"
-    ember-cli-is-package-missing "^1.0.0"
-    ember-cli-normalize-entity-name "^1.0.0"
-    ember-cli-path-utils "^1.0.0"
-    ember-cli-string-utils "^1.1.0"
-    ember-cli-version-checker "^3.1.3"
-    ember-router-generator "^1.2.3"
-    inflection "^1.12.0"
-    jquery "^3.4.1"
-    resolve "^1.10.1"
-
-"ember-source@https://s3.amazonaws.com/builds.emberjs.com/canary/shas/a9f2c52c7049da8ad1301493e89d194a6e5f083c.tgz":
-  version "3.12.0-canary"
-  resolved "https://s3.amazonaws.com/builds.emberjs.com/canary/shas/a9f2c52c7049da8ad1301493e89d194a6e5f083c.tgz#277d9dc6217fa28944cac97899163a00f017dc1b"
   dependencies:
     broccoli-funnel "^2.0.2"
     broccoli-merge-trees "^3.0.2"
