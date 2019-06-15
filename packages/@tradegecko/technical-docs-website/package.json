@@ -1,7 +1,7 @@
 {
   "name": "technical-docs-website",
   "version": "0.0.1",
-  "private": false,
+  "private": true,
   "description": "Small description for technical-docs-website goes here",
   "repository": "",
   "license": "MIT",

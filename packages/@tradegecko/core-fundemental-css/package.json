@@ -1,5 +1,6 @@
 {
   "name": "@tradegecko/core-fundemental-css",
+  "private": true,
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "billybonks <sebastienstettler@gmail.com>",
