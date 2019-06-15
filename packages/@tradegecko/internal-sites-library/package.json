@@ -4,7 +4,6 @@
   "keywords": [
     "ember-addon"
   ],
-  "private": true,
   "description": "Small description for internal-sites-library goes here",
   "repository": "",
   "license": "MIT",
