@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it generally works 1`] = `
+Array [
+  Object {
+    "id": "ourdesignprinciples",
+    "label": "Our Design Principles",
+    "level": 1,
+  },
+  Object {
+    "id": "asdasd",
+    "label": "Design needs to add value, for all customers",
+    "level": 2,
+  },
+  Object {
+    "id": "qweqweqwe",
+    "label": "Design makes the complex, simple",
+    "level": 2,
+  },
+  Object {
+    "id": "rererer",
+    "label": "Data driven from empathy",
+    "level": 3,
+  },
+  Object {
+    "id": "uuuuuu",
+    "label": "Done, tested, validated. Perfection is incremental",
+    "level": 2,
+  },
+  Object {
+    "id": "ggggg",
+    "label": "Design is a collaborative work",
+    "level": 4,
+  },
+]
+`;

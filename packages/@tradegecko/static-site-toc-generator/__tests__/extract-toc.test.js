@@ -1,4 +1,4 @@
-
+const extractToc = require('../extract-toc');
 let mixed = `
 <h1 id="ourdesignprinciples">Our Design Principles</h2>
 <ol>
@@ -22,6 +22,6 @@ let mixed = `
 </ol>
 <p><em>Getting input and quick feedback while designing gives more value to our work and allows us to iterate faster.</em></p>
 `
-extractToc = require('./extract-toc')
-let toc = extractToc(mixed, 4);
-console.log(toc)
+test('it generally works', function(){
+   expect(extractToc(mixed, 4)).toMatchSnapshot();
+});
