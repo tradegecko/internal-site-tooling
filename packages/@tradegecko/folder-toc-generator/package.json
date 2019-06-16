@@ -28,5 +28,14 @@
   },
   "bugs": {
     "url": "https://github.com/tradegecko/tradegecko-design-system/issues"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "jest": "^24.8.0"
   }
 }
