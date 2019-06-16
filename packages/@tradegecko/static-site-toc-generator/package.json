@@ -1,9 +1,9 @@
 {
   "name": "@tradegecko/static-site-toc-generator",
   "version": "0.0.1",
-  "description": "> TODO: description",
+  "description": "Adds a ToC array to broccoli-static-site-json ouput",
   "author": "billybonks <sebastienstettler@gmail.com>",
-  "homepage": "https://github.com/tradegecko/tradegecko-design-system#readme",
+  "homepage": "https://github.com/tradegecko/internal-site-tooling/tree/master/packages/@tradegecko/static-site-toc-generator#readme",
   "license": "ISC",
   "main": "index.js",
   "dependencies": {
