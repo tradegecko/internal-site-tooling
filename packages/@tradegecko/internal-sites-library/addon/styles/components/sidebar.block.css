@@ -1,26 +1,36 @@
 :scope {
-  padding-top: 55px;
-  padding-left: 30px;
-  padding-bottom: 12px;
-  width: 170px;
+  padding: 60px 30px 0px 30px;
+  width: 280px;
   /*background-color: #0e2168;*/
-  background-color: #f4f6fa;
+  position: fixed;
+  height: 100%;
+  z-index: 1;
+  overflow-x: hidden;
+
 }
 
-.title {
+
+.sidebar-title {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   /*color:#fff;*/
 }
 
 .link, .details-title {
-  /*color: #6f9bff;*/
-  color:#4b82ff;
-  font-size: 14px;
-  font-weight:600;
+  color: #9faac6;
+  font-size: 17px;
+  font-family: proxima-nova;
 
+}
+
+.sidebar-li {
+  margin-bottom: 8px;
+}
+
+.sidebar-li:first-child {
+  margin-top: 15px;
 }
 
 .link:hover, .details-title:hover {
@@ -33,13 +43,29 @@
   cursor: pointer;
 }
 
+.button {
+  display: block;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Proxima Nova", proxima-nova, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3px;
+  background: rgba(0,0,0,0) linear-gradient(#6ccb34 0%,#32b76b 100%) repeat scroll 0% 0% / auto border-box border-box;
+  color: #fff;
+}
+
+.button:hover {
+  color: #fff;
+}
 
 .list-item {
-
 }
-@media screen and (min-width: 1088px) {
-  .title {
 
+
+@media screen and (min-width: 1088px) {
+  .sidebar-title {
   }
 
   .link, .details-title {

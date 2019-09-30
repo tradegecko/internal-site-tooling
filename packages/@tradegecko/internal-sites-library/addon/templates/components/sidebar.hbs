@@ -1,13 +1,28 @@
 <aside class="">
-  <img src="/logo-mark.svg" width="50" height="50">
+  <img src="/logo.svg" width="200" height="50">
+  <p style="font-size: 16px;
+    padding-left: 60px;
+    margin-top: -17px;
+    font-family: proxima-nova;
+    color: #70cf32;
+    font-weight: 600;
+    letter-spacing: 0.3px;">style guide</p>
+
+    <!--<hr style="background-color:#e5e9f1; height: 1px; width: 128%;
+        left: -30px;
+        position: relative;">-->
+
+        <p><br></p>
+
+
   {{#each-in this.navWithChildren as | index nav |}}
     {{log nav}}
-    <h4 class="title">
+    <h4 class="sidebar-title">
       {{nav.title}}
     </h4>
     <ul>
       {{#each nav.pages as |child|}}
-        <li>
+        <li class="sidebar-li">
           {{#link-to "page" child.url class="link"}}
             {{child.title}}
           {{/link-to}}
@@ -33,4 +48,7 @@
         {{/each-in}}
     </ul>
   {{/each-in}}
+  <p><br><br></p>
+  <a class="button">Download PDF</a>
+  <p><br><br></p>
 </aside>

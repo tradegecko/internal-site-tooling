@@ -19,10 +19,12 @@
   color: #4a4a4a;
   display: block;
   line-height: 1.5;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 20px;
   position: relative;
   display: flex;
   align-items: center;
+  font-family: proxima-nova;
+  font-weight: 700;
 }
 
 .navbar-burger {
