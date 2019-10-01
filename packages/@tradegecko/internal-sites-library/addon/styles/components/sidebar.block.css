@@ -1,5 +1,5 @@
 :scope {
-  padding: 60px 30px 0px 30px;
+  padding: 50px 30px 0px 30px;
   width: 280px;
   /*background-color: #0e2168;*/
   position: fixed;
@@ -11,8 +11,8 @@
 
 
 .sidebar-title {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+  margin-top: 80px;
+  margin-bottom: 10px;
   font-size: 20px;
   font-weight: 700;
   /*color:#fff;*/
@@ -22,6 +22,7 @@
   color: #9faac6;
   font-size: 17px;
   font-family: proxima-nova;
+  font-weight: 500;
 
 }
 
@@ -34,8 +35,8 @@
 }
 
 .link:hover, .details-title:hover {
-  color: #32b4ff;
   text-decoration: none;
+  color:#2d3033;
 }
 
 .details-title {
