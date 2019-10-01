@@ -1,28 +1,42 @@
 :scope {
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 12px;
-  padding-left: 12px;
-  width: 16.6667%;
+  padding: 50px 30px 0px 30px;
+  width: 280px;
+  /*background-color: #0e2168;*/
+  position: fixed;
+  height: 100%;
+  z-index: 1;
+  overflow-x: hidden;
+
 }
 
-.title {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+
+.sidebar-title {
+  margin-top: 80px;
+  margin-bottom: 10px;
+  font-size: 20px;
   font-weight: 700;
-  margin-top: 4rem;
+  /*color:#fff;*/
 }
 
 .link, .details-title {
-  color: #6c7279;
-  display: block;
-  height: 2rem;
-  line-height: 2rem;
+  color: #9faac6;
+  font-size: 17px;
+  font-family: proxima-nova;
+  font-weight: 500;
+
+}
+
+.sidebar-li {
+  margin-bottom: 8px;
+}
+
+.sidebar-li:first-child {
+  margin-top: 15px;
 }
 
 .link:hover, .details-title:hover {
-  background-color: #f4f4f5;
+  text-decoration: none;
+  color:#2d3033;
 }
 
 .details-title {
@@ -30,23 +44,35 @@
   cursor: pointer;
 }
 
+.button {
+  display: block;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Proxima Nova", proxima-nova, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3px;
+  background: rgba(0,0,0,0) linear-gradient(#6ccb34 0%,#32b76b 100%) repeat scroll 0% 0% / auto border-box border-box;
+  color: #fff;
+}
+
+.button:hover {
+  color: #fff;
+}
 
 .list-item {
-
 }
+
+
 @media screen and (min-width: 1088px) {
-  .title {
-    margin-top: 4rem;
+  .sidebar-title {
   }
 
   .link, .details-title {
-    height: 3.5rem;
-    line-height: 3.5rem;
-    margin-left: -1.5rem;
-    padding-left: 1.5rem;
   }
 
   :scope {
-    border-right: 0.0625rem solid #e2e6e8;
+    border-right: 1px solid #e5e9f1;
   }
 }
