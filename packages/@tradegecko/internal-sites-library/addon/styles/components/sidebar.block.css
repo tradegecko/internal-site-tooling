@@ -1,14 +1,14 @@
 :scope {
   padding: 50px 30px 0px 30px;
-  width: 280px;
+  width: 300px;
   /*background-color: #0e2168;*/
+  background-color: #f8fbff;
   position: fixed;
   height: 100%;
   z-index: 1;
   overflow-x: hidden;
 
 }
-
 
 .sidebar-title {
   margin-top: 80px;
@@ -59,6 +59,7 @@
 
 .button:hover {
   color: #fff;
+  text-decoration: none;
 }
 
 .list-item {
