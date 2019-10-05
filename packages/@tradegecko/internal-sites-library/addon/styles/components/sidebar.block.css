@@ -10,6 +10,15 @@
 
 }
 
+.sub-text {
+  font-size: 17px;
+  padding-left: 63px;
+  margin-top: -17px;
+  font-family: proxima-nova;
+  color: #70cf32;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
 .sidebar-title {
   margin-top: 80px;
   margin-bottom: 10px;
@@ -24,10 +33,6 @@
   font-family: proxima-nova;
   font-weight: 500;
 
-}
-
-.sidebar-li {
-  margin-bottom: 8px;
 }
 
 .sidebar-li:first-child {

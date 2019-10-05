@@ -1,0 +1,12 @@
+<li>
+  <details>
+    <summary class="details-title">
+      {{title}}
+    </summary>
+    <ul>
+      {{#each-in pages as |index child|}}
+        <SidebarItem url={{child.url}} title={{child.title}} />
+      {{/each-in}}
+    </ul>
+  </details>
+</li>

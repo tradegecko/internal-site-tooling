@@ -1,17 +1,6 @@
 <aside class="">
   <img src="/logo.svg" width="210" height="50">
-  <p style="font-size: 17px;
-    padding-left: 63px;
-    margin-top: -17px;
-    font-family: proxima-nova;
-    color: #70cf32;
-    font-weight: 600;
-    letter-spacing: 0.3px;">Our Brand</p>
-
-    <!--<hr style="background-color:#e5e9f1; height: 1px; width: 128%;
-        left: -30px;
-        position: relative;">-->
-
+  <p class="sub-text">Our Brand</p>
 
   {{#each-in this.navWithChildren as | index nav |}}
     {{log nav}}
@@ -20,30 +9,11 @@
     </h4>
     <ul>
       {{#each nav.pages as |child|}}
-        <li class="sidebar-li">
-          {{#link-to "page" child.url class="link"}}
-            {{child.title}}
-          {{/link-to}}
-        </li>
+        <SidebarItem @url={{child.url}} @title={{child.title}} />
       {{/each}}
       {{#each-in nav.children as |index childNav|}}
-          <li class="list-item">
-            <details>
-              <summary class="details-title">
-                {{childNav.title}}
-              </summary>
-              <ul>
-                {{#each-in childNav.pages as |index child|}}
-                  <li>
-                    {{#link-to "page" child.url class="link"}}
-                      {{child.title}}
-                    {{/link-to}}
-                  </li>
-                {{/each-in}}
-              </ul>
-            </details>
-          </li>
-        {{/each-in}}
+        <SidebarFolder @title={{child.title}} @pages={{child.pages}} />
+      {{/each-in}}
     </ul>
   {{/each-in}}
   <!--<p><br><br></p>

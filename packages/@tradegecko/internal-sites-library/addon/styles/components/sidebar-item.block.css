@@ -1,0 +1,15 @@
+:scope {
+  margin-bottom: 8px;
+}
+
+.link{
+  color: #9faac6;
+  font-size: 17px;
+  font-family: proxima-nova;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: none;
+  color:#2d3033;
+}
