@@ -30,11 +30,9 @@ function capitalize(string){
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function buildNav(pages, inputPath, root){
-  let dir = join(inputPath,root)
+function buildNav(pages, inputPath){
   let path = [];
-  let page = pages[root]
-  let topLevel= buildNavigationSection(page,dir,path);
+  let topLevel= buildNavigationSection({children:pages},inputPath,path);
   return [
     {
        title: 'root',
