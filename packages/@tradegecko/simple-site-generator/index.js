@@ -1,12 +1,13 @@
 const showdown = require('showdown');
 showdown.setOption('tables', true);
 showdown.setOption('simplifiedAutoLink', true);
-
+const walkSync = require('walk-sync')
 const StaticSiteJson = require('broccoli-static-site-json');
 const BroccoliMergeTrees = require('broccoli-merge-trees');
 const TableOfContents = require('@tradegecko/folder-toc-generator');
 const MarkDownTableOfContents = require('@tradegecko/static-site-toc-generator');
 const funnel = require('broccoli-funnel');
+const AssetRev = require('broccoli-asset-rev');
 
 module.exports = {
   name: require('./package').name,
@@ -32,13 +33,18 @@ module.exports = {
 
     const jsonTree = new StaticSiteJson(folder, staticSiteConfig);
 
+    var fingerprintedJsonTree = new AssetRev(jsonTree, {
+      extensions: ['json'],
+      generateAssetMap: true
+    });
+
     let images = funnel(folder,{
       destDir: 'images',
       include: ['**/*.png','**/*.jpg']
     });
 
     return new BroccoliMergeTrees(
-      [jsonTree, images]
+      [fingerprintedJsonTree, images]
     );
   }
 };

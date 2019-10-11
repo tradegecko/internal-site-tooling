@@ -9,6 +9,7 @@
   "dependencies": {
     "@tradegecko/folder-toc-generator": "0.0.1",
     "@tradegecko/static-site-toc-generator": "0.0.1",
+    "broccoli-asset-rev": "^3.0.0",
     "broccoli-merge-trees": "^3.0.2",
     "broccoli-plugin": "^1.3.1",
     "broccoli-static-site-json": "^3.2.0",
