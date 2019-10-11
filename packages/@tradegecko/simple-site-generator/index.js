@@ -10,30 +10,35 @@ const funnel = require('broccoli-funnel');
 
 module.exports = {
   name: require('./package').name,
+
   treeForPublic() {
     let siteGeneratorOptions = this.app.options.simpleSiteGenerator;
-    let staticSiteConfig = siteGeneratorOptions.staticSiteJson;
     let folder = siteGeneratorOptions.folder;
-    staticSiteConfig.attributes.push('navigation')
-    const TocGenerator = siteGeneratorOptions.tocGenerator || TableOfContents
+
+    let staticSiteConfig = {
+      ...siteGeneratorOptions.staticSiteJson,
+      attributes: [...siteGeneratorOptions.staticSiteJson.attributes, 'navigation'],
+      buildToc: function(markdownFolder, jsonFolder, options) {
+        return new TableOfContents(jsonFolder, {
+          root: options.contentFolder,
+        });
+      },
+      postProcessContentTree: (contentTree) => {
+        return new MarkDownTableOfContents(contentTree,
+          {depth: siteGeneratorOptions.markdownTocDepth});
+      }
+    };
+
+
     const jsonTree = new StaticSiteJson(folder, staticSiteConfig);
-    let jsonTreeWithToc = new MarkDownTableOfContents(jsonTree,
-      {depth: siteGeneratorOptions.markdownTocDepth});
+
     let images = funnel(folder,{
       destDir: 'images',
       include: ['**/*.png','**/*.jpg']
     });
-    let navigation = null;
-    if(siteGeneratorOptions.tocGenerator){
-      navigation = new siteGeneratorOptions.tocGenerator(folder);
-    } else {
-      navigation = new TocGenerator(jsonTree, {
-        root: staticSiteConfig.contentFolder
-      });
-    }
 
     return new BroccoliMergeTrees(
-      [jsonTreeWithToc, navigation, images]
+      [jsonTree, images]
     );
   }
 };
